@@ -1,1 +1,75 @@
-
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080808">
+<meta name="description" content="VELLUM-STORE — experiências digitais com identidade, design e edição.">
+<title>VELLUM-STORE — Design além do comum</title>
+<style>
+:root{--bg:#080808;--panel:#111113;--line:#29292d;--muted:#a3a3a8;--white:#f5f5f5;--accent:#d8d8d8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.13;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E");z-index:10}
+a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 44px));margin:auto}.nav{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff12;position:relative;z-index:20}.brand{display:flex;align-items:center;gap:11px;font-size:17px;font-weight:750;letter-spacing:.22em}.mark{width:34px;height:34px;border:1px solid #aaa;border-radius:11px;display:grid;place-items:center;transform:rotate(45deg);font-size:21px;font-weight:300}.mark span{transform:rotate(-45deg)}.links{display:flex;gap:32px;color:#c2c2c5;font-size:13px}.links a:hover{color:white}.nav-cta,.btn{border:1px solid #eee;background:#f2f2f2;color:#090909;border-radius:999px;padding:12px 19px;font-size:12px;font-weight:750;transition:.25s;display:inline-flex;align-items:center;justify-content:center;gap:10px}.nav-cta:hover,.btn:hover{transform:translateY(-2px);box-shadow:0 8px 30px #fff2}.menu{display:none;background:none;color:white;border:0;font-size:24px}
+.hero{min-height:650px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:40px;padding:76px 0 90px;position:relative}.eyebrow{color:#b9b9bd;text-transform:uppercase;letter-spacing:.25em;font-size:10px;display:flex;align-items:center;gap:12px}.eyebrow:before{content:"";width:25px;height:1px;background:#aaa}.hero h1{font-size:clamp(48px,7.2vw,88px);line-height:.98;letter-spacing:-.075em;margin:24px 0 22px;font-weight:650}.hero h1 em{font-style:normal;color:#777}.lead{color:#aaa;max-width:470px;line-height:1.8;font-size:15px}.hero-actions{display:flex;gap:12px;align-items:center;margin-top:30px;flex-wrap:wrap}.btn.ghost{background:transparent;color:white;border-color:#555}.orb-wrap{height:440px;display:grid;place-items:center;position:relative}.orb{width:min(390px,80vw);aspect-ratio:1;border:1px solid #555;border-radius:50%;display:grid;place-items:center;position:relative;box-shadow:inset 0 0 80px #ffffff08,0 0 100px #fff08;animation:float 7s ease-in-out infinite}.orb:before,.orb:after{content:"";position:absolute;border:1px solid #777;border-radius:50%;inset:13%;transform:rotate(-28deg) scaleY(.38)}.orb:after{inset:7%;transform:rotate(35deg) scaleY(.25);border-color:#444}.big-v{font-size:170px;line-height:1;font-weight:200;letter-spacing:-.16em;padding-right:20px;background:linear-gradient(130deg,#fff,#777 65%,#eee);color:transparent;background-clip:text;-webkit-background-clip:text;text-shadow:0 15px 55px #fff2}.orbit{position:absolute;width:112%;height:40%;border:1px solid #aaa;border-radius:50%;transform:rotate(-25deg);animation:spin 18s linear infinite}.orbit:after{content:"";position:absolute;width:8px;height:8px;background:#eee;border-radius:50%;top:9%;left:15%;box-shadow:0 0 18px white}
+.scroll{position:absolute;bottom:28px;left:0;color:#777;font-size:9px;letter-spacing:.2em;text-transform:uppercase;display:flex;gap:13px;align-items:center}.scroll:before{content:"";height:36px;width:1px;background:#555}
+.section{padding:100px 0;border-top:1px solid #ffffff12}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:38px}.section h2{font-size:clamp(32px,4vw,52px);letter-spacing:-.06em;font-weight:550;margin:12px 0 0}.section-head p{max-width:350px;color:#888;font-size:13px;line-height:1.7;margin:0}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,#151517,#0d0d0f);padding:26px;min-height:230px;position:relative;overflow:hidden;transition:.35s}.card:hover{transform:translateY(-6px);border-color:#777}.card .num{font-size:10px;color:#777;letter-spacing:.15em}.icon{width:44px;height:44px;border:1px solid #555;border-radius:13px;display:grid;place-items:center;margin:28px 0 18px;color:#eee;font-size:19px}.card h3{font-size:18px;margin:0 0 9px;font-weight:550}.card p{font-size:12px;color:#888;line-height:1.7;margin:0;max-width:270px}.card:after{content:"";position:absolute;width:180px;height:180px;border:1px solid #ffffff0b;border-radius:50%;right:-75px;bottom:-105px;box-shadow:0 0 0 22px #ffffff04,0 0 0 45px #ffffff03}
+.showcase{display:grid;grid-template-columns:1.15fr .85fr;gap:14px}.visual{border:1px solid var(--line);border-radius:18px;min-height:370px;overflow:hidden;position:relative;background:radial-gradient(ellipse at 50% 100%,#39393d 0,#151517 35%,#09090a 75%);display:flex;align-items:center;justify-content:center}.visual:before{content:"";position:absolute;width:70%;aspect-ratio:1;border:1px solid #ffffff20;border-radius:50%;box-shadow:0 0 0 35px #ffffff06,0 0 0 70px #ffffff04}.visual-logo{text-align:center;position:relative;z-index:1}.visual-logo b{font-size:100px;font-weight:200;letter-spacing:-.12em;background:linear-gradient(140deg,#fff,#777);color:transparent;background-clip:text}.visual-logo span{display:block;letter-spacing:.55em;font-size:13px;margin-top:5px}.visual-caption{position:absolute;left:25px;bottom:23px;color:#999;font-size:10px;letter-spacing:.14em;text-transform:uppercase}.mini-stack{display:grid;gap:14px}.mini{border:1px solid var(--line);border-radius:18px;padding:25px;background:linear-gradient(135deg,#171719,#0b0b0c);min-height:178px;position:relative;overflow:hidden}.mini h3{font-size:16px;font-weight:550;margin:0 0 10px}.mini p{color:#888;font-size:12px;line-height:1.7;max-width:300px}.mini .arrow{position:absolute;right:23px;bottom:20px;font-size:20px;color:#aaa}
+.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.price{padding:27px;border:1px solid var(--line);border-radius:18px;background:#101012;position:relative}.price.featured{border-color:#aaa;background:linear-gradient(145deg,#1a1a1d,#101012)}.tag{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#aaa}.price h3{font-size:22px;font-weight:550;margin:18px 0 6px}.price .desc{font-size:12px;color:#888;min-height:38px}.price ul{list-style:none;padding:20px 0;margin:0;border-top:1px solid #ffffff12}.price li{font-size:12px;color:#bbb;margin:13px 0}.price li:before{content:"✓";color:#eee;margin-right:10px}.price .btn{width:100%;margin-top:12px}.price .btn.ghost{border-color:#555}
+.cta{border:1px solid #333;border-radius:22px;padding:55px 35px;text-align:center;background:radial-gradient(ellipse at 50% 0%,#242427,#101012 65%);position:relative;overflow:hidden}.cta h2{font-size:clamp(30px,5vw,54px);letter-spacing:-.06em;margin:12px 0}.cta p{color:#999;font-size:13px;margin:0 auto 25px;max-width:420px;line-height:1.7}
+footer{padding:28px 0 40px;color:#777;font-size:11px}.foot{display:flex;justify-content:space-between;gap:20px;align-items:center;border-top:1px solid #ffffff12;padding-top:24px}.foot .brand{font-size:12px;color:#ddd}.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-13px)}}@keyframes spin{to{transform:rotate(335deg)}}
+@media(max-width:760px){.wrap{width:min(100% - 32px,560px)}.nav{height:70px}.links{display:none}.menu{display:block}.nav-cta{padding:10px 14px}.hero{grid-template-columns:1fr;padding:65px 0 70px;gap:0}.hero h1{font-size:clamp(52px,14vw,78px)}.orb-wrap{height:320px;grid-row:1}.orb{width:280px}.big-v{font-size:125px}.scroll{display:none}.section{padding:70px 0}.section-head{display:block}.section-head p{margin-top:16px}.cards,.prices{grid-template-columns:1fr}.card{min-height:190px}.icon{margin:20px 0 14px}.showcase{grid-template-columns:1fr}.visual{min-height:300px}.mini-stack{grid-template-columns:1fr 1fr}.mini{min-height:190px;padding:18px}.cta{padding:45px 20px}.foot{align-items:flex-start;flex-direction:column}.price .desc{min-height:0}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header class="wrap nav">
+  <a class="brand" href="#inicio"><span class="mark"><span>V</span></span> VELLUM<span style="font-weight:300;color:#888">/STORE</span></a>
+  <nav class="links"><a href="#sobre">Sobre</a><a href="#servicos">Serviços</a><a href="#planos">Planos</a></nav>
+  <a class="nav-cta" href="https://www.instagram.com/vellum.storebr/" target="_blank" rel="noopener">Fale conosco ↗</a>
+  <button class="menu" aria-label="Abrir menu" onclick="document.querySelector('.links').style.display=document.querySelector('.links').style.display==='flex'?'none':'flex'">☰</button>
+</header>
+<main>
+<section class="wrap hero" id="inicio">
+  <div class="hero-copy reveal">
+    <div class="eyebrow">Design • Edição • Identidade</div>
+    <h1>O comum<br><em>não basta.</em></h1>
+    <p class="lead">Ideias ganham forma com uma estética marcante. Conheça a VELLUM-STORE e transforme sua visão em algo único.</p>
+    <div class="hero-actions"><a class="btn" href="https://www.instagram.com/vellum.storebr/" target="_blank" rel="noopener">Começar um projeto ↗</a><a class="btn ghost" href="#servicos">Explorar</a></div>
+  </div>
+  <div class="orb-wrap reveal"><div class="orb"><div class="orbit"></div><div class="big-v">V</div></div></div>
+  <div class="scroll">Role para descobrir</div>
+</section>
+<section class="section" id="sobre"><div class="wrap">
+  <div class="section-head reveal"><div><div class="eyebrow">01 / Nossa essência</div><h2>Feito para se destacar.</h2></div><p>Uma presença visual consistente começa nos detalhes. Criamos com intenção, equilíbrio e personalidade.</p></div>
+  <div class="cards">
+    <article class="card reveal"><span class="num">01 — IDENTIDADE</span><div class="icon">◇</div><h3>Visual com personalidade</h3><p>Uma estética limpa, moderna e pensada para representar sua ideia.</p></article>
+    <article class="card reveal"><span class="num">02 — CRIATIVIDADE</span><div class="icon">✳</div><h3>Ideias em movimento</h3><p>Composição, contraste e ritmo para dar vida ao que você imaginou.</p></article>
+    <article class="card reveal"><span class="num">03 — EXPERIÊNCIA</span><div class="icon">↗</div><h3>Atendimento direto</h3><p>Converse com a gente e explique o que você precisa, sem complicação.</p></article>
+  </div>
+</div></section>
+<section class="section" id="servicos"><div class="wrap">
+  <div class="section-head reveal"><div><div class="eyebrow">02 / Vitrine</div><h2>Seu projeto, outra perspectiva.</h2></div><p>Conte o que você quer criar. A gente conversa sobre possibilidades e próximos passos.</p></div>
+  <div class="showcase">
+    <div class="visual reveal"><div class="visual-logo"><b>V</b><span>VELLUM</span><small style="display:block;letter-spacing:.45em;color:#888;margin-top:10px">STORE</small></div><div class="visual-caption">Uma marca. Infinitas possibilidades.</div></div>
+    <div class="mini-stack"><article class="mini reveal"><div class="eyebrow">Criar</div><h3>Do conceito ao visual</h3><p>Compartilhe sua referência e vamos encontrar a direção ideal.</p><span class="arrow">↗</span></article><article class="mini reveal"><div class="eyebrow">Conectar</div><h3>Vamos tirar a ideia do papel?</h3><p>Entre em contato pelo Instagram para conversar sobre seu pedido.</p><span class="arrow">↗</span></article></div>
+  </div>
+</div></section>
+<section class="section" id="planos"><div class="wrap">
+  <div class="section-head reveal"><div><div class="eyebrow">03 / Orçamento</div><h2>Um projeto de cada vez.</h2></div><p>Os valores variam conforme o tipo e a complexidade do trabalho. Peça um orçamento personalizado.</p></div>
+  <div class="prices">
+    <article class="price reveal"><span class="tag">01 / Inicial</span><h3>Essencial</h3><p class="desc">Para começar com uma ideia clara.</p><ul><li>Conversa sobre a referência</li><li>Definição do pedido</li><li>Orçamento individual</li></ul><a class="btn ghost" href="https://www.instagram.com/vellum.storebr/" target="_blank" rel="noopener">Consultar</a></article>
+    <article class="price featured reveal"><span class="tag">02 / Sob medida</span><h3>Personalizado</h3><p class="desc">Uma solução alinhada ao seu objetivo.</p><ul><li>Pedido personalizado</li><li>Alinhamento de estilo</li><li>Valor conforme o projeto</li></ul><a class="btn" href="https://www.instagram.com/vellum.storebr/" target="_blank" rel="noopener">Pedir orçamento ↗</a></article>
+    <article class="price reveal"><span class="tag">03 / Especial</span><h3>Projeto completo</h3><p class="desc">Para necessidades com mais detalhes.</p><ul><li>Escopo combinado</li><li>Planejamento do trabalho</li><li>Atendimento via direct</li></ul><a class="btn ghost" href="https://www.instagram.com/vellum.storebr/" target="_blank" rel="noopener">Conversar</a></article>
+  </div>
+</div></section>
+<section class="section"><div class="wrap"><div class="cta reveal"><div class="eyebrow" style="justify-content:center">VELLUM-STORE</div><h2>Sua ideia começa aqui.</h2><p>Tem um projeto em mente? Mande uma mensagem e vamos conversar.</p><a class="btn" href="https://www.instagram.com/vellum.storebr/" target="_blank" rel="noopener">Chamar no Instagram ↗</a></div></div></section>
+</main>
+<footer><div class="wrap foot"><a class="brand" href="#inicio"><span class="mark"><span>V</span></span> VELLUM/STORE</a><span>© <span id="year"></span> VELLUM-STORE. Feito com intenção.</span><a href="https://discord.gg/37Cf52BYja" target="_blank" rel="noopener">Discord ↗</a></div></footer>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body></html>
